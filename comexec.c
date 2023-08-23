@@ -21,6 +21,8 @@ int comexec(char **args, char **avi, char **evi, int ng, char *cmd)
 			if (execve(args[0], args, evi) == -1)
 			{
 				notfound(avi[0], ng, args[0]);
+				freen(args);
+				free(cmd);
 				exit(EXIT_FAILURE);
 			}
 		}

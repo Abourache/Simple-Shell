@@ -33,6 +33,8 @@ int main(int ac __attribute__((unused)), char **av, char **ev)
 			free(v.buff);
 			exit(0);
 		}
+		else if (white(v.buff) == 0)
+			;
 		else
 		{
 			v.args = split(v.buff);

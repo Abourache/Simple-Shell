@@ -68,3 +68,21 @@ char *_strdup(const char *str)
 	}
 	return (dup);
 }
+/**
+ * white - white
+ * @buff
+ * Return: int
+*/
+int white(char *buf)
+{
+	int i;
+
+	for (i = 0; buf[i] != '\0'; i++)
+	{
+		if (buf[i] != ' ' && buf[i] != '\t' && buf[i] != '\n')
+		{
+			return (1);
+		}
+	}
+	return (0);
+}

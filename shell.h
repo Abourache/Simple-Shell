@@ -44,5 +44,6 @@ char *_strdup(const char *str);
 char *_strcpy(char *d, char *s);
 int _strlen(char *str);
 int _strcmp(char *str1, char *str2);
-char *_strcat(char *ptr, char *str);
+char *_strcat(char *ptr, char * str);
+int white(char *buf);
 #endif
