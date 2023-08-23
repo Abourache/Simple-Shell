@@ -70,7 +70,7 @@ char *_strdup(const char *str)
 }
 /**
  * white - white
- * @buff
+ * @buf: buf
  * Return: int
 */
 int white(char *buf)

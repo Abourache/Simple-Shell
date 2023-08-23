@@ -24,17 +24,17 @@ int main(int ac __attribute__((unused)), char **av, char **ev)
 			if (interactive)
 				_putchar('\n');
 			free(v.buff);
-			exit(-1);
+			exit(0);
 		}
-		else if (_strcmp(v.buff, "\n") == 0)
+		else if (_strcmp(v.buff, "\n") == 0 || white(v.buff) == 0)
 			;
 		else if (_strcmp(v.buff, "exit\n") == 0)
 		{
 			free(v.buff);
-			exit(0);
+			if(v.ng == 1)
+				exit(0);
+			exit(2);
 		}
-		else if (white(v.buff) == 0)
-			;
 		else
 		{
 			v.args = split(v.buff);

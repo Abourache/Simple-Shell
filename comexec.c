@@ -23,7 +23,7 @@ int comexec(char **args, char **avi, char **evi, int ng, char *cmd)
 				notfound(avi[0], ng, args[0]);
 				freen(args);
 				free(cmd);
-				exit(127);
+				exit(0);
 			}
 		}
 		else
@@ -32,7 +32,6 @@ int comexec(char **args, char **avi, char **evi, int ng, char *cmd)
 				wait(&status);
 			else
 				perror("fork");
-
 		}
 	}
 	else if (cmd)
@@ -46,6 +45,9 @@ int comexec(char **args, char **avi, char **evi, int ng, char *cmd)
 			perror("fork");
 	}
 	else
+	{
 		notfound(avi[0], ng, args[0]);
+		exit(127);
+	}
 	return (status);
 }
