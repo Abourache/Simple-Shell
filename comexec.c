@@ -23,7 +23,7 @@ int comexec(char **args, char **avi, char **evi, int ng, char *cmd)
 				notfound(avi[0], ng, args[0]);
 				freen(args);
 				free(cmd);
-				exit(EXIT_FAILURE);
+				exit(127);
 			}
 		}
 		else
