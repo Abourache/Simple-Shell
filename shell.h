@@ -6,6 +6,18 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+/**
+ * struct vr - vr list
+ * @args: integer
+ * @buff: points to the next node
+ * @cmd: cmd
+ * @status: status
+ * @n: n
+ * @ng: ng
+ * @f: f
+ * @p: p
+ * Description: for betty check
+*/
 typedef struct vr
 {
 	char **args;
@@ -28,7 +40,7 @@ void freen(char **args);
 int _putchar(char c);
 void _puts(char *str);
 void notfound(char *str, int ng, char *arg);
-char* _strdup(const char* str);
+char *_strdup(const char *str);
 char *_strcpy(char *d, char *s);
 int _strlen(char *str);
 int _strcmp(char *str1, char *str2);
