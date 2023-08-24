@@ -45,9 +45,6 @@ int comexec(char **args, char **avi, char **evi, int ng, char *cmd)
 			perror("fork");
 	}
 	else
-	{
 		notfound(avi[0], ng, args[0]);
-		exit(127);
-	}
 	return (status);
 }

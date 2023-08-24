@@ -24,6 +24,9 @@ int main(int ac __attribute__((unused)), char **av, char **ev)
 			if (interactive)
 				_putchar('\n');
 			free(v.buff);
+			free(v.p);
+			freen(tok);
+			free(tok);
 			exit(0);
 		}
 		else if (_strcmp(v.buff, "\n") == 0 || white(v.buff) == 0)
@@ -31,6 +34,9 @@ int main(int ac __attribute__((unused)), char **av, char **ev)
 		else if (_strcmp(v.buff, "exit\n") == 0)
 		{
 			free(v.buff);
+			free(v.p);
+			freen(tok);
+			free(tok);
 			if(v.ng == 1)
 				exit(0);
 			exit(2);
@@ -47,7 +53,8 @@ int main(int ac __attribute__((unused)), char **av, char **ev)
 		v.ng++;
 	}
 	free(v.buff);
+	free(tok);
 	freen(v.args);
-	freen(tok);
+	free(v.p);
 	return (0);
 }
